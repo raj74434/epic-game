@@ -34,3 +34,23 @@ background-color: #121212;
     justify-content: space-evenly;
     color: white;
 }
+
+ #Trending{
+display: flex;
+border:solid white;
+}
+  #Trend_sliding
+  {
+    height: 300px;
+  }
+  #Trend_list{
+   height:300px;
+  }
+
+  #sales_buttons{
+display: flex;
+  }
+
+  #sale_list{
+display: flex;
+  }
