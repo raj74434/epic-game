@@ -182,3 +182,48 @@ cart.append(count)
 
 
 smallR.append(wish,cart)
+
+// ......................Automatic sliding poster
+
+
+let slideBase=[{img:"https://cdn2.unrealengine.com/egs-fifa23ultimateeditionlimitedtimebonus-eacanada-editions-s1-2560x1440-c6f883262ed6.jpg?h=480&amp;resize=1&amp;w=854" ,
+name:"FIFA 23 Ultimate Edition",
+},
+{
+img:"https://cdn2.unrealengine.com/egs-railgrade-carousel-desktop-1280x702-35df53cf42ca.jpg?h=1080&resize=1&w=1920" ,
+name:"RAILGRADE" ,
+},
+{img:"https://cdn2.unrealengine.com/egs-slime-rancher-2-carousel-desktop-1248x702-03a65cfb74df.jpg?h=1080&resize=1&w=1920",
+name:"Slime Rancher 2"
+},
+{img:"https://cdn2.unrealengine.com/egs-fn-sypher-pk-carousel-desktop-1248x702-47058e4c9f1b.jpg?h=1080&resize=1&w=1920" ,
+name:"Fortnite"
+
+},
+
+]
+
+let Trend_sliding=document.querySelector("#Trend_sliding");
+
+let slidepost=document.createElement("img")
+
+let imgposter=0;
+
+setTimeout(function(){
+    slidepost.innerHTML="";
+    slidepost.src=slideBase[imgposter].img;
+    slidepost.style.width="100%"
+    slidepost.style.height="100%"
+Trend_sliding.append(slidepost);
+imgposter++;
+// if(imgposter==5){imgposter=0}
+
+
+},2000);
+
+ 
+
+
+
+
+
