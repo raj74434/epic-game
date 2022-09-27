@@ -209,13 +209,15 @@ let slidepost=document.createElement("img")
 
 let imgposter=0;
 
-setTimeout(function(){
+setInterval(function(){
     slidepost.innerHTML="";
     slidepost.src=slideBase[imgposter].img;
     slidepost.style.width="100%"
     slidepost.style.height="100%"
+    imgposter++;
+    console.log(imgposter)
 Trend_sliding.append(slidepost);
-imgposter++;
+
 // if(imgposter==5){imgposter=0}
 
 
