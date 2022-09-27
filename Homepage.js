@@ -214,14 +214,15 @@ setInterval(function(){
     slidepost.src=slideBase[imgposter].img;
     slidepost.style.width="100%"
     slidepost.style.height="100%"
+    slidepost.style.borderRadius="20px"
     imgposter++;
-    console.log(imgposter)
+    if(imgposter==slideBase.length){imgposter=0}
 Trend_sliding.append(slidepost);
 
-// if(imgposter==5){imgposter=0}
+if(imgposter==5){imgposter=0}
 
 
-},2000);
+},3000);
 
  
 

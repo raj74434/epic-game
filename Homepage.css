@@ -41,7 +41,9 @@ border:solid white;
 }
   #Trend_sliding
   {
-    height: 400px;
+    height: 420px;
+    width: 800px;
+    border-radius: 20px;
   }
   #Trend_list{
    height:300px;
