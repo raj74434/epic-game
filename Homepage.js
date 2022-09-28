@@ -203,15 +203,86 @@ name:"Fortnite"
 
 ]
 
+//  ---------------------------------Trend games list----------------------
+
+let Trend_list=document.querySelector("#Trend_list")
+
+
+
+let slid1div=document.querySelector("#post1")
+let slid2div=document.querySelector("#post2")
+let slid3div=document.querySelector("#post3")
+let slid4div=document.querySelector("#post4")
+
+slider();
+function slider(){
+
+let slid1=document.querySelector("#post1>h4")
+let slid2=document.querySelector("#post2>h4")
+let slid3=document.querySelector("#post3>h4")
+let slid4=document.querySelector("#post4>h4")
+
+let slid1Img=document.querySelector("#post1>img")
+let slid2Img=document.querySelector("#post2>img")
+let slid3Img=document.querySelector("#post3>img")
+let slid4Img=document.querySelector("#post4>img")
+
+slid1.innerText=slideBase[0].name;
+slid1Img.src=slideBase[0].img;
+
+slid2.innerText=slideBase[1].name;
+slid2Img.src=slideBase[1].img;
+
+slid3.innerText=slideBase[2].name;
+slid3Img.src=slideBase[2].img;
+
+slid4.innerText=slideBase[3].name;
+slid4Img.src=slideBase[3].img;
+
+slid1div.append(slid1);
+
+}
+
+
+// ---------------------------Sliding games automatic------------------------------
+
 let Trend_sliding=document.querySelector("#Trend_sliding");
 
 let slidepost=document.createElement("img")
 
 let imgposter=0;
 
+let Anim=document.querySelector("#Anim")
+
 setInterval(function(){
     slidepost.innerHTML="";
     slidepost.src=slideBase[imgposter].img;
+
+    if(imgposter==0){
+        slid1div.style.backgroundColor="grey";
+        slid2div.style.backgroundColor="transparent";
+        slid3div.style.backgroundColor="transparent";
+        slid4div.style.backgroundColor="transparent";
+    }
+    if(imgposter==1){
+        slid1div.style.backgroundColor="transparent";
+        slid2div.style.backgroundColor="grey";
+        slid3div.style.backgroundColor="transparent";
+        slid4div.style.backgroundColor="transparent";
+    }
+    if(imgposter==2){
+        slid1div.style.backgroundColor="transparent";
+        slid2div.style.backgroundColor="transparent";
+        slid3div.style.backgroundColor="grey";
+        slid4div.style.backgroundColor="transparent";
+    }
+    if(imgposter==3){
+        slid1div.style.backgroundColor="transparent";
+        slid2div.style.backgroundColor="transparent";
+        slid3div.style.backgroundColor="transparent";
+        slid4div.style.backgroundColor="grey";
+    }
+
     slidepost.style.width="100%"
     slidepost.style.height="100%"
     slidepost.style.borderRadius="20px"
@@ -224,7 +295,6 @@ if(imgposter==5){imgposter=0}
 
 },3000);
 
- 
 
 
 
