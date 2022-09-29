@@ -37,7 +37,7 @@ background-color: #121212;
 
  #Trending{
 display: flex;
-border:solid white;
+/* border:solid white; */
 }
   #Trend_sliding
   {
@@ -65,7 +65,7 @@ border:solid white;
    margin-left:12px;
   }
   #Trend_list{
-    border: solid green;
+    /* border: solid green; */
     color: white;
    height:420px;
    width: 300px;
@@ -75,6 +75,7 @@ border:solid white;
   }
 
   #sales_buttons{
+    margin-top: 50px;
 display: flex;
   }
 

@@ -106,7 +106,7 @@ smallNav.style.backgroundColor="#121212"
 // ----------------------------------------------------------------------------------------
 let smallL=document.createElement("div") ;  // Small navbar left part;
 smallL.style.display="flex";
-smallL.style.width="350px"
+smallL.style.width="550px"
 smallL.style.justifyContent="space-between"
 smallNav.append(smallL)
 
@@ -114,13 +114,14 @@ let serach=document.createElement("input")
 serach.style.borderRadius="20px";
 serach.style.backgroundColor="#2a2a2a"
 serach.style.color="white"
-serach.style.width="150px"
+serach.style.width="250px"
 serach.style.fontSize="18px"
 serach.placeholder="Search Games"
 serach.style.padding="20px"
 smallL.append(serach)
 
 let selet=document.createElement("Select")
+selet.style.width="200px"
 selet.style.color="white"
 selet.style.lineHeight="0px"
 selet.style.fontSize="18px"
@@ -131,9 +132,16 @@ let op2=document.createElement("option")
 let op3=document.createElement("option")
 
 op1.innerText="Discover";
+op1.style.backgroundColor="#2a2a2a"
+op1.style.padding="20px"
 
 op2.innerText="Browse";
+op2.style.backgroundColor="#2a2a2a"
+// op2.style.width="100px"
+
 op3.innerText="News"
+op3.style.backgroundColor="#2a2a2a"
+// op3.style.width="100px"
 
 selet.append(op1,op2,op3)
 smallL.append(selet)
@@ -254,6 +262,7 @@ let imgposter=0;
 
 let Anim=document.querySelector("#Anim")
 
+// ===================================Sliding main part=========================
 setInterval(function(){
     slidepost.innerHTML="";
     slidepost.src=slideBase[imgposter].img;
@@ -296,6 +305,66 @@ if(imgposter==5){imgposter=0}
 },3000);
 
 
+let salesGameData=[
+{
+    img:"https://cdn1.epicgames.com/offer/975d251af0384c88a898a996bda4881d/EGS_PathfinderWrathoftheRighteousEnhancedEdition_OwlcatGames_S2_1200x1600-fc0129430d25f46c7faa5b4167488ca1?h=854&resize=1&w=640",
+    name:"Pathfinder: Wrath of the Righteous - Enhanced",
+    type:"BASE GAME",
+    discount:"60%",
+    oldPrice:"2,449",
+    newPrice:"979.60",
+
+},
+{
+    img:"https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait%20Store%20Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg?h=854&resize=1&w=640",
+    name:"Grand Theft Auto V: Premium Edition",
+    type:"BASE GAME",
+    discount:"50%",
+    oldPrice:"2321",
+    newPrice:"1160",
+},
+{
+    img:"https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de?h=854&resize=1&w=640",
+    name:"Shadow of the Tomb Raider: Definitive Edition",
+    type:"BASE GAME",
+    discount:"50%",
+    oldPrice:" ₹2,195",
+    newPrice:"",
+},
+{
+    img:"https://cdn1.epicgames.com/catnip/offer/BL3Tall_1200x1440-1200x1440-c1200ae70b5e054025e296746d1987a8.jpg?h=854&resize=1&w=640",
+    name:"Borderlands 3",
+    type:"BASE GAME",
+    discount:"75%",
+    oldPrice:"₹2,990",
+    newPrice:"₹747.50",
+},
+// {
+//     img:,
+//     name:,
+//     type:"BASE GAME",
+//     discount:,
+//     oldPrice:,
+//     newPrice:,
+// },
+// {
+//     img:,
+//     name:,
+//     type:"BASE GAME",
+//     discount:,
+//     oldPrice:,
+//     newPrice:,
+// },
+// {
+//     img:,
+//     name:,
+//     type:"BASE GAME",
+//     discount:,
+//     oldPrice:,
+//     newPrice:,
+// },
+
+];
 
 
 
