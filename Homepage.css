@@ -75,10 +75,11 @@ display: flex;
   }
 
   #sales_buttons{
-    margin-top: 50px;
+    margin-top: 100px;
 display: flex;
   }
 
   #sale_list{
+    color: white;
 display: flex;
   }

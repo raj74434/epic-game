@@ -310,7 +310,7 @@ let salesGameData=[
     img:"https://cdn1.epicgames.com/offer/975d251af0384c88a898a996bda4881d/EGS_PathfinderWrathoftheRighteousEnhancedEdition_OwlcatGames_S2_1200x1600-fc0129430d25f46c7faa5b4167488ca1?h=854&resize=1&w=640",
     name:"Pathfinder: Wrath of the Righteous - Enhanced",
     type:"BASE GAME",
-    discount:"60%",
+    discount:"-60%",
     oldPrice:"2,449",
     newPrice:"979.60",
 
@@ -319,34 +319,34 @@ let salesGameData=[
     img:"https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait%20Store%20Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg?h=854&resize=1&w=640",
     name:"Grand Theft Auto V: Premium Edition",
     type:"BASE GAME",
-    discount:"50%",
-    oldPrice:"2321",
+    discount:"-50%",
+    oldPrice:"2,321",
     newPrice:"1160",
 },
 {
     img:"https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de?h=854&resize=1&w=640",
     name:"Shadow of the Tomb Raider: Definitive Edition",
     type:"BASE GAME",
-    discount:"50%",
-    oldPrice:" ₹2,195",
-    newPrice:"",
+    discount:"-50%",
+    oldPrice:"2,195",
+    newPrice:"1,097.50",
 },
 {
     img:"https://cdn1.epicgames.com/catnip/offer/BL3Tall_1200x1440-1200x1440-c1200ae70b5e054025e296746d1987a8.jpg?h=854&resize=1&w=640",
     name:"Borderlands 3",
     type:"BASE GAME",
-    discount:"75%",
+    discount:"-75%",
     oldPrice:"₹2,990",
     newPrice:"₹747.50",
 },
-// {
-//     img:,
-//     name:,
-//     type:"BASE GAME",
-//     discount:,
-//     oldPrice:,
-//     newPrice:,
-// },
+{
+    img:"https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_InsurgencySandstormbasegame_NewWorldInteractive_Editions_S2_1200x1600-68b46ff62079d0f55889b09ced95e5f1?h=854&resize=1&w=640",
+    name:"Insurgency: Sandstorm",
+    type:"BASE GAME",
+    discount:"-50%",
+    oldPrice:"999",
+    newPrice:"499.50",
+},
 // {
 //     img:,
 //     name:,
@@ -366,6 +366,65 @@ let salesGameData=[
 
 ];
 
+let sale_list=document.querySelector("#sale_list")
+
+salesGameData.forEach(function(el){
+
+ let div= document.createElement("div")
+ div.style.width="200px";
+ div.style.height="500px";
+ div.style.display="block";
+ 
+ div.style.alignItems="end";
+
+//  div.style.border="solid red";
+
+ div.style.marginLeft="20px";
+
+
+ let imgDiv=document.createElement("div");
+ imgDiv.style.width="100%"
+ imgDiv.style.height="360px"
+//  imgDiv.style.border="solid green"
+ let type=document.createElement("h6")
+ type.innerText=el.type
+
+ let tag=document.createElement("h4")
+ tag.innerText=el.name
+
+ let img=document.createElement("img")
+ img.src=el.img;
+ img.style.width="100%"
+ img.style.height="230px"
+ imgDiv.append(img,type,tag);
 
 
 
+ let priceDiv=document.createElement("div")
+ priceDiv.style.display="flex";
+ priceDiv.style.justifyContent="space-between";
+ priceDiv.style.alignItems="center";
+//  priceDiv.style.border="solid yellow";
+
+
+ 
+
+ let dicPercent=document.createElement("div")
+ dicPercent.innerText=el.discount;
+ dicPercent.style.padding="10px 20px";
+ dicPercent.style.backgroundColor="#007aff"
+ dicPercent.style.borderRadius="10px"
+
+ let finalPrice=document.createElement("div")
+ let  old=document.createElement("h5");
+ old.innerText=el.oldPrice
+ let  newP=document.createElement("h4");
+ newP.innerText=el.newPrice
+
+ finalPrice.append(old,newP);
+ priceDiv.append(dicPercent,finalPrice)
+ div.append(imgDiv,priceDiv)
+
+ sale_list.append(div)
+
+})
