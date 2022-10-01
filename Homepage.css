@@ -83,3 +83,23 @@ display: flex;
     color: white;
 display: flex;
   }
+
+   #Suggest{
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(2, 500px);
+    
+    justify-content: space-between; 
+   }
+   #Suggest h3{
+    color: grey;;
+   }
+
+   #Suggest img{
+    padding: 0px;
+    border-radius: 25px;
+    cursor: pointer;
+    width:500px
+   }
