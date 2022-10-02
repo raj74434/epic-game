@@ -87,7 +87,7 @@ display: flex;
    #Suggest{
     padding: 20px;
     color: white;
-    margin-top: 20px;
+    margin-top: 30px;
     display: grid;
     grid-template-columns:repeat(2, 500px);
     
@@ -102,4 +102,8 @@ display: flex;
     border-radius: 25px;
     cursor: pointer;
     width:500px
+   }
+
+   #freeGames{
+    background-color: grey;
    }
