@@ -473,6 +473,54 @@ freeGames.append(div);
 
 }
 
+// ===================================================== Most popular games Section =========
+
+
+let mostPopularGamesData=[
+    {
+        img:"https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait%20Store%20Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg?h=854&resize=1&w=640",
+        type:"BASE GAME",
+        name:"Grand Theft Auto V: Premium Edition",
+        discount:"50%",
+        old:"2321",
+        new:"1160"
+    },
+    {
+        img:"https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/VALportrait_1200x1600-74261a10f40a6a5015f069ddb7aa910c?h=854&resize=1&w=640",
+        type:"BASE GAME",
+        name:"VALORANT",
+        discount:"100",
+        old:"",
+        new:""
+    },
+    {
+        img:"https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg?h=854&resize=1&w=640",
+        type:"BASE GAME",
+        name:"ARK: Survival Evolved",
+        discount:"0",
+        old:"469",
+        new:""
+    },
+    {
+        img:"https://cdn1.epicgames.com/offer/0c6aee83b9b64372bf44a043001325f2/EGS_NARAKABLADEPOINT_24Entertainment_S2_1200x1600-88f4e1f1ee1ffa8f7a85bf4e3a492e7e?h=854&resize=1&w=640",
+        type:"BASE GAME",
+        name:"NARAKA: BLADEPOINT",
+        discount:"50%",
+        old:"1199",
+        new:"599"
+    },
+    {
+        img:"https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de?h=854&resize=1&w=640",
+        type:"BASE GAME",
+        name:"Shadow of the Tomb Raider: Definitive Edition",
+        discount:"0",
+        old:"2195",
+        new:""
+    }
+    ]
+    
+
+
 let mostPopularGames=document.querySelector("mostPopularGames");
 popularGames();
 
