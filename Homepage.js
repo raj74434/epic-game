@@ -525,5 +525,31 @@ let mostPopularGames=document.querySelector("mostPopularGames");
 popularGames();
 
 function popularGames(){
+    mostPopularGamesData.forEach(function(el){
+        let div=document.createElement("div")
+        let img=document.createElement("img")
+        img.src=el.img;
+        let h6=document.createElement("h6")
+        h6.innerText=el.type
+        let name=document.createElement("h4")
+        name=el.name
+        div.append(img,h6,name);
+
+        let divPrice=document.createElement("div")
+       
+        if(el.discount==100){
+         let h3=document.createElement("h3")
+         h3.innerText="Free"
+         divPrice.append(h3) 
+        }
+        else if(el.discount==0){
+            let h3=document.createElement("h3")
+            h3.innerText="Free"
+            divPrice.append(h3)
+        }
+        else{
+            
+        }
+    })
 
 }
