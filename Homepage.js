@@ -1,5 +1,5 @@
 let innerContainer=document.querySelector("#innerContainer")
-innerContainer.style.width="80%";
+innerContainer.style.width="1200px";
 innerContainer.style.margin="Auto"
 innerContainer.style.border="solid";
 
@@ -433,29 +433,49 @@ salesGameData.forEach(function(el){
 
 let freeGamesdata=[
 {img:"https://cdn1.epicgames.com/spt-assets/c4dde13fcdea4aaa84dabb303006a870/download-runbow-offer-6amjn.png?h=854&resize=1&w=640",
-avil:"yes"
+avil:"yes",
+details:"Runbow"
 },
 {img:"https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TheDroneRacingLeagueSimulator_TheDroneRacingLeague_S2_1200x1600-36e93298383163f825fc934da9003fb5?h=854&resize=1&w=640",
-avail:"yes"
+avail:"yes",
+details:"The Drone Racing League®"
 },
 
 {
     img:"https://cdn1.epicgames.com/spt-assets/8f7e0537b57d4a14bdd11a3e719973a1/download-rising-hell-offer-17mu8.jpg?h=854&resize=1&w=640",
-    avail:"No"
+    avail:"No",
+    details:"Rising Hell"
 },
 {img:"https://cdn1.epicgames.com/spt-assets/c314efd052d048908cbd57ce7bf9e28a/download-slain-offer-1xiyd.jpg?h=854&resize=1&w=640",
-avail:"No"
+avail:"No",
+details:"Slain: Back From Hell"
 }
 ]
 
-free();
 
+let freeGames=document.querySelector("#freeGames")
+free();
 function free(){
     freeGamesdata.forEach(function(el){
         let div=document.createElement("div")
-let img=document.createElement("img")
-img.src=el.img;
+        let img=document.createElement("img")
+        let div2=document.createElement("div")
+        div2.style.textAlign="center";
+        div2.innerText=el.avail
 
+        let h4=document.createElement("h3")
+        h4.innerText=el.details;
+
+img.src=el.img;
+div.append(img,h4);
+freeGames.append(div);
     })
+
+}
+
+let mostPopularGames=document.querySelector("mostPopularGames");
+popularGames();
+
+function popularGames(){
 
 }
