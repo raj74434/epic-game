@@ -138,3 +138,23 @@ padding:40px 50px;
     width: 100%;
     border-radius: 10px;
    }
+
+   #mostPopularGamesContainer{
+    margin-top: 100px;
+   }
+   #mostPopularGamesContainer>div{
+    margin-top: 60px;
+color: white;
+   }
+
+   #mostPopularGames>div>img{
+width: 100%;
+
+   }
+   #mostPopularGames{
+   
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    
+   }

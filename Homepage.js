@@ -521,12 +521,13 @@ let mostPopularGamesData=[
     
 
 
-let mostPopularGames=document.querySelector("mostPopularGames");
+let mostPopularGames=document.querySelector("#mostPopularGames");
 popularGames();
 
 function popularGames(){
     mostPopularGamesData.forEach(function(el){
         let div=document.createElement("div")
+        div.style.padding="15px"
         let img=document.createElement("img")
         img.src=el.img;
         let h6=document.createElement("h6")
@@ -536,20 +537,44 @@ function popularGames(){
         div.append(img,h6,name);
 
         let divPrice=document.createElement("div")
+        divPrice.style.display="flex";
+        divPrice.style.justifyContent="space-between";
+        divPrice.style.alignItems="center";
        
         if(el.discount==100){
-         let h3=document.createElement("h3")
+         let h3=document.createElement("h2")
          h3.innerText="Free"
          divPrice.append(h3) 
+         div.append(divPrice)
         }
         else if(el.discount==0){
-            let h3=document.createElement("h3")
-            h3.innerText="Free"
+            let h3=document.createElement("h2")
+            h3.innerText=el.old
             divPrice.append(h3)
+            div.append(divPrice)
         }
         else{
+            let discountDiv=document.createElement("div")
+            discountDiv.style.backgroundColor="#007aff"
+            discountDiv.style.fontSize="15px"
+            discountDiv.style.height="20px"
+            discountDiv.style.padding="5px 25px"
+            discountDiv.style.borderRadius="10px"
+           
+
+            discountDiv.innerText=el.discount;
+            let pric=document.createElement("div")
             
+            let old=document.createElement("h4")
+            old.innerText=el.old
+            let newP=document.createElement("h2")
+            newP.innerText=el.new
+            pric.append(old,newP)
+            divPrice.append(discountDiv,pric)
+            div.append(divPrice)
         }
+
+        mostPopularGames.append(div)
     })
 
 }
