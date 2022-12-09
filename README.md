@@ -3,4 +3,4 @@
 <img src="https://user-images.githubusercontent.com/105916680/206272623-723ac155-4ed9-4d8c-8b22-733bdf509815.PNG" />
 
 
-<h1> Tech stack :- Java Script,Html,css </h1>
+<h1> Tech stack :- Java Script,HTML,CSS </h1>
